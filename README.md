@@ -1,1 +1,3 @@
 Miscellaneous experiments that don't deserve their own repositories.
+
+"Projects" that show up here all go into their own subfolders. The naming of the experiments goes as follows: language/engine/whatever else the experiment was done in comes first, then an underscore, then a "description" of what the experiment is. Example: "cpp_2dplatformer" (for what would be a 2D platformer game or an engine for one written in C++).

@@ -1,0 +1,14 @@
+version "4.3"
+
+mixin class SecretNoMsgOverride
+{
+	override bool OnGiveSecret(bool printmsg, bool playsound)
+	{
+		return false;
+	}
+}
+
+class TestPlayer : DoomPlayer
+{
+	mixin SecretNoMsgOverride;
+}

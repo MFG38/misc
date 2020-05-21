@@ -1,0 +1,2 @@
+An attempt to get rid of the "A secret is revealed!" message in GZDoom
+utilizing a mixin.

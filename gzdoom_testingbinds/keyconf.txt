@@ -1,0 +1,9 @@
+addkeysection "Testing" MFGTestingBinds
+
+alias screenshotmode1	"noclip; notarget; fly; screenblocks 12; r_drawplayersprites 0"
+alias screenshotmode0	"noclip; notarget; fly; screenblocks 10; r_drawplayersprites 1"
+alias fillinventory	"give backpack; give weapons; give ammo"
+
+addmenukey "Go to screenshot mode"	screenshotmode1
+addmenukey "Exit screenshot mode"	screenshotmode0
+addmenukey "Weapons + ammo"		fillinventory

@@ -1,0 +1,6 @@
+A batch script that generates a devlog template text file with the current date
+in its contents, as well as the end of the filename.
+
+IMPORTANT NOTE: The offsets in the date variables have been set according to
+the time as displayed on my system. They are not the same across all systems.
+Edit the offsets as needed to suit your system time.

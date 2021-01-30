@@ -1,0 +1,2 @@
+A very rudimentary text editor in Python. Programmed following this tutorial:
+https://www.instructables.com/Create-a-Simple-Python-Text-Editor/

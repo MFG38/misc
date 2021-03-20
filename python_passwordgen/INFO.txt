@@ -1,0 +1,3 @@
+A script that generates a password between 8 and 32 characters in length.
+Ported to Python 3 from the PySnippets repository's Python 2 version:
+https://github.com/MFG38/PySnippets/blob/master/passwordgen/passwordgen.py

@@ -2,7 +2,7 @@ A batch utility to create and restore backups of GZDoom config files.
 
 HOW TO USE:
 Copy configbackup.bat to your GZDoom installation folder and run it. The
-program lets you perform one of two operations: Backup and Restore.
+program lets you perform two operations: Backup and Restore.
 
 You can use the Backup operation to create a backup of your current GZDoom
 config file. Type 'backup' to perform the operation. Upon typing it and

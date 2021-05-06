@@ -16,7 +16,6 @@ def genPassword(length):
         return generatedPW
 
 def copy(txt):
-    # txt = generatedPW
     subprocess.run(['clip.exe'], input=txt.strip().encode('utf-16'), check=True)
 
 passLength = int(input("Enter desired length of password (8-32 characters): "))

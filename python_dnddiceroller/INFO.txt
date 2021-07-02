@@ -1,0 +1,5 @@
+A DnD dice roller written in Python. Takes an input in xdy format (where
+x is the number of dice to be rolled and y is the number of sides on each
+dice) and prints the value of each individual dice along with the total.
+Programmed following some pointers from here:
+https://stackoverflow.com/questions/40033971/dd-dice-roll-python

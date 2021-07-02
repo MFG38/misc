@@ -1,0 +1,3 @@
+A simple dice roller written in Python. Programmed following this
+tutorial (with self-taught conversion from Python 2 to Python 3):
+https://www.pythonforbeginners.com/code-snippets-source-code/game-rolling-the-dice

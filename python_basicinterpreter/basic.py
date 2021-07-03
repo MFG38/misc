@@ -31,32 +31,60 @@ class Token:
 ##########
 
 class Error:
-    def __init__(self, errorName, details):
+    def __init__(self, posStart, posEnd, errorName, details):
+        self.posStart = posStart
+        self.posEnd = posEnd
         self.errorName = errorName
         self.details = details
     
     def as_string(self):
-        result = f'{self.errorName}: {self.details}'
+        result = f'{self.errorName}: {self.details}\n'
+        result += f'File {self.posStart.fn}, line {self.posStart.ln + 1}'
         return result
 
 class IllegalChar(Error):
-    def __init__(self, details):
-        super().__init__('Illegal Character', details)
+    def __init__(self, posStart, posEnd, details):
+        super().__init__(posStart, posEnd, 'Illegal Character', details)
+
+############
+# POSITION #
+############
+
+class Position:
+    def __init__(self, index, ln, col, fn, ftxt):
+        self.index = index
+        self.ln = ln
+        self.col = col
+        self.fn = fn
+        self.ftxt = ftxt
+    
+    def advance(self, curChar):
+        self.index += 1
+        self.col += 1
+        
+        if curChar == '\n':
+            self.ln += 1
+            self.col = 0
+        return self
+    
+    def copy(self):
+        return Position(self.index, self.ln, self.col, self.fn, self.ftxt)
 
 #########
 # LEXER #
 #########
 
 class Lexer:
-    def __init__(self, text):
+    def __init__(self, fn, text):
+        self.fn = fn
         self.text = text
-        self.pos = -1
+        self.pos = Position(-1, 0, -1, fn, text)
         self.curChar = None
         self.advance()
     
     def advance(self):
-        self.pos += 1
-        self.curChar = self.text[self.pos] if self.pos < len(self.text) else None
+        self.pos.advance(self.curChar)
+        self.curChar = self.text[self.pos.index] if self.pos.index < len(self.text) else None
     
     def make_tokens(self):
         tokens = []
@@ -85,9 +113,10 @@ class Lexer:
                 tokens.append(Token(T_PARENR))
                 self.advance()
             else:
+                posStart = self.pos.copy()
                 ic = self.curChar
                 self.advance()
-                return [], IllegalChar(ic)
+                return [], IllegalChar(posStart, self.pos, ic)
         return tokens, None
     
     def make_number(self):
@@ -112,8 +141,8 @@ class Lexer:
 # RUNNER #
 ##########
 
-def run(text):
-    lex = Lexer(text)
+def run(fn, text):
+    lex = Lexer(fn, text)
     tokens, error = lex.make_tokens()
     
     return tokens, error

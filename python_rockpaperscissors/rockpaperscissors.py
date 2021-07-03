@@ -9,6 +9,7 @@ def get_result():
     # Draw condition
     if playerChoice == cpuChoice:
         print("DRAW")
+    
     # Lose conditions
     elif playerChoice == "rock" and cpuChoice == "paper":
         print("YOU LOSE")
@@ -16,6 +17,7 @@ def get_result():
         print("YOU LOSE")
     elif playerChoice == "scissors" and cpuChoice == "rock":
         print("YOU LOSE")
+    
     # Win conditions
     elif playerChoice == "scissors" and cpuChoice == "paper":
         print("YOU WIN")

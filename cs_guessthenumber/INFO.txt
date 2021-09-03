@@ -1,0 +1,2 @@
+A number-guessing game written in C#. Programmed following this tutorial video:
+https://www.youtube.com/watch?v=IhqdPDPV_g8

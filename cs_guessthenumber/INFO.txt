@@ -1,2 +1,3 @@
-A number-guessing game written in C#. Programmed following this tutorial video:
+A number-guessing game written in C#. Programmed following this tutorial video,
+then expanded upon based on my own ideas:
 https://www.youtube.com/watch?v=IhqdPDPV_g8

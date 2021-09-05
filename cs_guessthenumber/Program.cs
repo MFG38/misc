@@ -15,7 +15,7 @@ namespace GuessTheNumber
             do
             {
                 Console.WriteLine("Guesses left: {0}", guessesLeft);
-                Console.Write("Guess a nomber between 1 and 20: ");
+                Console.Write("Guess a number between 1 and 20: ");
                 string gs = Console.ReadLine();
 
                 int gi = int.Parse(gs);

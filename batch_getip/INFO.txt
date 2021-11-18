@@ -1,0 +1,1 @@
+A simple batch file that gets and prints your IP address.

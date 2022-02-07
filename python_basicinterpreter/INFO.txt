@@ -1,3 +1,0 @@
-A BASIC interpreter written in Python. Programmed following this
-series of video tutorials:
-https://www.youtube.com/playlist?list=PLZQftyCk7_SdoVexSmwy_tBgs7P0b97yD

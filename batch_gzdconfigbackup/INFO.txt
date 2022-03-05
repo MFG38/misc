@@ -5,7 +5,7 @@ Copy configbackup.bat to your GZDoom installation folder and run it. The
 program lets you perform two operations: Backup and Restore.
 
 You can use the Backup operation to create a backup of your current GZDoom
-config file. Type 'backup' to perform the operation. Upon typing it and
+config file. Type 'backup' or 'b' to perform the operation. Upon typing it and
 pressing Enter, the program will ask you for the name of the input file;
 generally, this will be "gzdoom-<your_username>". Type it in and press Enter;
 you will then be asked to provide a name for the output file. Type a name
@@ -13,7 +13,7 @@ for the backup file and press Enter, and the program will create a copy of
 your GZDoom config file with the output name that you provided.
 
 The Restore operation, then, is used to restore a GZDoom config file from a
-backup. Type 'restore' to perform the operation. Upon typing it and pressing
+backup. Type 'restore' or 'r' to perform the operation. Upon typing it and pressing
 Enter, the program will ask you for the name of the config file to generate
 the new config file from. In order for this operation to work properly, it is
 recommended to input some other file than your default GZDoom config file (i.e.

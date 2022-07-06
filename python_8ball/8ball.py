@@ -12,7 +12,8 @@ responses = [
     "Wouldn't count on it.",
     "You can count on it.",
     "Ask again tomorrow.",
-    "0x098123a0: Unexpected error processing question."
+    "0x098123a0: Unexpected error processing question.",
+    "Sorry, busy. Try again in a few minutes."
 ]
 
 while True:

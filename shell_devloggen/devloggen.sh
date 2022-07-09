@@ -1,6 +1,7 @@
 #!/bin/sh
 LOGDATE=$(date +%F)
+FILEDATE=$(date +%Y%m%d)
 
-echo Development Log >> devlog_"$LOGDATE".txt
-echo "$LOGDATE" >> devlog_"$LOGDATE".txt
-echo --------------- >> devlog_"$LOGDATE".txt
+echo Development Log >> devlog_"$FILEDATE".txt
+echo "$LOGDATE" >> devlog_"$FILEDATE".txt
+echo --------------- >> devlog_"$FILEDATE".txt

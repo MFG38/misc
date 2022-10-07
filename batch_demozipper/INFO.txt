@@ -1,0 +1,7 @@
+A small batch script I wrote to automate zipping up Doom demos
+and their text files for submission to DSDA.
+
+NOTE: This script lacks the usual 7za.exe that I use for the
+zipping functionality. You'll need to download it yourself and
+place it in the proper folder or edit the line indicated in the
+script to modify the path to it.

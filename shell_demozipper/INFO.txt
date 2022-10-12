@@ -1,0 +1,1 @@
+A Bash version of my demo zipper batch file.

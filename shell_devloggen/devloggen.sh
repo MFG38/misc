@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 LOGDATE=$(date +%F)
 FILEDATE=$(date +%Y%m%d)
 

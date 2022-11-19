@@ -1,0 +1,1 @@
+A shell script that deletes all files in your Downloads folder.

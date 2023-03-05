@@ -1,0 +1,5 @@
+A bulk file renaming tool written in Python. Prints working directory and prompts
+for the pattern to look for and the new pattern to replace it with.
+
+Written using several different references, including Python documentation and
+StackOverflow.

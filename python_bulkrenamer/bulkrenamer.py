@@ -11,8 +11,7 @@ def renameBulk(path, pattern, replacement):
             oldName = os.path.join(path, filename)
             os.rename(oldName, newName)
 
-while True:
-    print("Working directory is " + format(wd))
-    lookFor = input("Enter pattern to look for: ")
-    replaceWith = input("Enter replacement pattern: ")
-    renameBulk(wd, lookFor, replaceWith)
+#print("Working directory is " + format(wd))
+lookFor = input("Enter pattern to look for: ")
+replaceWith = input("Enter replacement pattern: ")
+renameBulk(wd, lookFor, replaceWith)

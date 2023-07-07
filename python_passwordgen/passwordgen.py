@@ -1,6 +1,6 @@
 import random
 import string
-import subprocess
+from tkinter import Tk
 
 chars = string.ascii_letters + string.digits
 
@@ -15,8 +15,13 @@ def genPassword(length):
         print("Your password is: " + generatedPW)
         return generatedPW
 
-def copy(txt):      # Should look into a cross-platform alternative for this.
-    subprocess.run(['clip.exe'], input=txt.strip().encode('utf-16'), check=True)
+def copy(txt):
+    t = Tk()
+    t.withdraw()
+    t.clipboard_clear()
+    t.clipboard_append(txt)
+    t.update()
+    t.destroy()
 
 passLength = int(input("Enter desired length of password (8-32 characters): "))
 password = genPassword(passLength)

@@ -1,0 +1,2 @@
+A blackjack program written in C. Programmed following
+instructions in "Head First C", Chapter 1.

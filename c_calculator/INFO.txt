@@ -1,5 +1,5 @@
 A simple calculator written in C. Had an idea of my own that
 *almost* worked but segfaulted in testing, so I ended up
 simplifying the implementation based on other people's code
-samples. I might still modify this and implement the original
-idea if I ever figure out the problem.
+samples. I then simplified it even further when I had a
+"would that work?" sort of moment, and it turns out it did.

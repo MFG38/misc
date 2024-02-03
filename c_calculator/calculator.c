@@ -6,14 +6,9 @@ int main()
     int     a, b;
     char    operator;
     float   result;
-    //char  expression[4];
 
-    printf("Operator: ");
-    scanf("%c", &operator);
-    printf("First number: ");
-    scanf("%i", &a);
-    printf("Second number: ");
-    scanf("%i", &b);
+    printf("Enter expression: ");
+    scanf("%i%c%i", &a, &operator, &b);
 
     switch(operator)
     {

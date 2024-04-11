@@ -4,11 +4,11 @@ BASEDIR=$(pwd)
 GENFILE="demos-by-wad.txt"
 
 if [ -f $GENFILE ]; then
-    echo "Deleting previous TXT..."
+    echo "Regenerating $GENFILE..."
     rm $GENFILE
     touch $GENFILE
 else
-    echo "Creating TXT..."
+    echo "Generating $GENFILE..."
     touch $GENFILE
 fi
 

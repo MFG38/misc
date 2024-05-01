@@ -6,5 +6,4 @@ Accepts the following commands:
   list  - Prints the list of entries currently in the list, with
           the index number and description of each one.
   sort  - Sorts the entries alphabetically.
-
-TODO: Save the list to a file on exit.
+  exit  - Exits the program.

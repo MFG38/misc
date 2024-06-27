@@ -1,4 +1,4 @@
-life = 20;
+let life = 20;
 
 function displayLife() {
 	document.getElementById("trackerPlaceholder").innerText = life;

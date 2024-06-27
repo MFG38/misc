@@ -1,0 +1,22 @@
+body
+{
+	background-color: #eb9f82;
+}
+
+p, .tracker
+{
+	font-family: serif;
+	text-align: center;
+	color: #d3202a;
+}
+
+p
+{
+	font-size: 88px;
+}
+
+.tracker
+{
+	font-size: 160px;
+}
+

@@ -12,7 +12,7 @@ int idx;
 float cubeWidth = 10;
 int width = 128;
 int height = 40;
-int distance = 60;
+int distance = 50;
 float k1 = 40;
 
 float zBuffer[128 * 40];
@@ -94,8 +94,8 @@ int main()
 			putchar(k % width ? buffer[k] : 10);
 		}
 
-		a += 0.005;
-		b += 0.005;
+		a += 0.003;
+		b += 0.003;
 		usleep(1000);
 	}
 

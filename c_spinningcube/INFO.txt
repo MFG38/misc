@@ -1,0 +1,3 @@
+A visualization of a spinning cube written in C.
+Programmed using this video as a reference:
+https://www.youtube.com/watch?v=p09i_hoFdd0

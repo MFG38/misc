@@ -3,11 +3,8 @@
 #include <string.h>
 #include <unistd.h>
 
-float a, b, c;
-float x, y, z;
-float ooz;
-int xp, yp;
-int idx;
+float a, b, c, x, y, z, ooz;
+int xp, yp, idx;
 
 float cubeWidth = 10;
 int width = 128;

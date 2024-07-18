@@ -36,25 +36,25 @@ void main()
         switch(pressed)
         {
         case KEY_RIGHT:
-            if(dir != RIGHT || dir != LEFT)
+            if(dir != RIGHT && dir != LEFT)
             {
                 dir = RIGHT;
             }
             break;
         case KEY_UP:
-            if(dir != UP || dir != DOWN)
+            if(dir != UP && dir != DOWN)
             {
                 dir = UP;
             }
             break;
         case KEY_LEFT:
-            if(dir != LEFT || dir != RIGHT)
+            if(dir != LEFT && dir != RIGHT)
             {
                 dir = LEFT;
             }
             break;
         case KEY_DOWN:
-            if(dir != DOWN || dir != UP)
+            if(dir != DOWN && dir != UP)
             {
                 dir = DOWN;
             }

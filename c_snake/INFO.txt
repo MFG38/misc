@@ -1,4 +1,0 @@
-A snake game written in C. Programmed using the
-following resources as references:
-https://www.youtube.com/watch?v=SFtWBVMdAOA
-https://github.com/troglobit/snake

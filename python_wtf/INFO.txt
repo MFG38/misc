@@ -1,1 +1,0 @@
-An unnecessarily complex and barely logical boolean function for no reason.

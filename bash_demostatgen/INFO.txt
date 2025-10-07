@@ -4,6 +4,3 @@ of Doom speedruns I've recorded by wad or category.
 gen-demos-by-wad.sh:
   Generates demo counts by wad by going to each wad's subfolder
   and scanning the number of .lmp files therein.
-
-gen-demos-by-category.sh:
-  Coming soon. Hopefully.

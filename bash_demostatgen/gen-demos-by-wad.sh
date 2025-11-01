@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 BASEDIR=$(pwd)
 GENFILE="demos-by-wad.txt"

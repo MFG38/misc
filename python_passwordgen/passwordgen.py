@@ -1,6 +1,5 @@
 import random
 import string
-from tkinter import Tk
 
 chars = string.ascii_letters + string.digits
 
@@ -15,15 +14,8 @@ def genPassword(length):
         print("Your password is: " + generatedPW)
         return generatedPW
 
-def copy(txt):
-    t = Tk()
-    t.withdraw()
-    t.clipboard_clear()
-    t.clipboard_append(txt)
-    t.update()
-    t.destroy()
-
 passLength = int(input("Enter desired length of password (8-32 characters): "))
 password = genPassword(passLength)
-copy(password)
-print("Password has been copied to clipboard.")
+
+# TODO: Implement a copy-to-clipboard function that actually works.
+# print("Password has been copied to clipboard.")

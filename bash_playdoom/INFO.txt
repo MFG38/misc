@@ -1,0 +1,5 @@
+My personal Bash script for launching dsda-doom.
+
+TODO: Still needs better support for loading multiple PWADs
+and multiple PWAD directories. Maybe also see if autocompletion
+can be implemented.

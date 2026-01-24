@@ -7,5 +7,5 @@ do
     read -p "Name of target zip: " TARFILE
     7za a -tzip $TARFILE.zip $TARFILE.lmp $TARFILE.txt
 
-    read -p "Zip another file? [y/N]" DOANOTHER
+    read -p "Zip another file? [y/N] " DOANOTHER
 done

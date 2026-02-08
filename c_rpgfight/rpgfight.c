@@ -31,11 +31,11 @@ int GetNextRNGIndex()
     return rng[i] % RNG_TABLE_SIZE;
 }
 
-void DoDamage(struct Character source, struct Character target)
+void DoDamage(struct Character *source, struct Character *target)
 {
     int damage;
 
-    target.curHP -= (source.atk + (rng[i] % 5));
+    target->curHP -= (source->atk + (rng[i] % 5));
 }
 
 int main()

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 #define RNG_TABLE_SIZE  64
 
@@ -27,18 +28,66 @@ int i = 0;
 
 int GetNextRNGIndex()
 {
-    i++;
-    return rng[i] % RNG_TABLE_SIZE;
+    i = (i + 1) % 64;
+    return rng[i];
 }
 
 void DoDamage(struct Character *source, struct Character *target)
 {
-    int damage;
+    int damage = source->atk + (rng[i] % 5);
+    target->curHP -= damage;
 
-    target->curHP -= (source->atk + (rng[i] % 5));
+    fprintf(stdout, "%s hits %s for %i damage!\n", source->name, target->name, damage);
+}
+
+void DoHeal(struct Character *target)
+{
+    int heal = 4 + (rng[i] % 4);
+    target->curHP += heal;
+
+    if(target->curHP > target->maxHP) {
+        target->curHP = target->maxHP;
+    }
+
+    fprintf(stdout, "%s heals for %i HP!\n", target->name, heal);
 }
 
 int main()
 {
+    char command[2];
+
+    while(enemy.curHP > 0)
+    {
+        fprintf(stdout, "Your HP: %i\nEnemy's HP: %i\n", player.curHP, enemy.curHP);
+        fprintf(stdout, "What do you wish to do? [A]ttack / [H]eal) / [S]kip turn / View [R]NG Table Index\n");
+        scanf("%s", command);
+
+        switch(command[0]) {
+            case 'a':
+                DoDamage(&player, &enemy);
+                GetNextRNGIndex();
+                DoDamage(&enemy, &player);
+                GetNextRNGIndex();
+                break;
+            case 'h':
+                DoHeal(&player);
+                GetNextRNGIndex();
+                DoDamage(&enemy, &player);
+                GetNextRNGIndex();
+                break;
+            case 's':
+                DoDamage(&enemy, &player);
+                GetNextRNGIndex();
+                break;
+            case 'r':
+                fprintf(stdout, "RNG table is at index %i\n", i);
+                break;
+        }
+
+        if(enemy.curHP <= 0) fprintf(stdout, "You won!\n");
+        else if(player.curHP <= 0) fprintf(stdout, "You lost...\n");
+    }
+
     return 0;
 }
+

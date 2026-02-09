@@ -28,7 +28,7 @@ int i = 0;
 
 int GetNextRNGIndex()
 {
-    i = (i + 1) % 64;
+    i = (i + 1) % RNG_TABLE_SIZE;
     return rng[i];
 }
 

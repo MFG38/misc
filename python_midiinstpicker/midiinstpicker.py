@@ -148,7 +148,7 @@ pickedInsts = []
 numInsts: int = input("How many instruments do you wish to have? ")
 includeDrum: str = input("Do you also want a drum kit? [y/N] ")
 
-# TODO: Add integer overflow and duplicate entry prevention.
+# TODO: Add input validation and duplicate entry prevention.
 for i in range(0, int(numInsts)):
     pickedInsts.append(random.choice(midiInsts))
 

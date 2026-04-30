@@ -145,17 +145,16 @@ midiDrumKits = [
 
 pickedInsts = []
 
-numInsts: int = input("How many instruments do you wish to have? ")
-includeDrum: str = input("Do you also want a drum kit? [y/N] ")
+numInsts = int(input("How many instruments do you wish to have? "))
+includeDrum = str(input("Do you also want a drum kit? [y/N] "))
 
 # TODO: Add input validation and duplicate entry prevention.
-for i in range(0, int(numInsts)):
-    pickedInsts.append(random.choice(midiInsts))
+pickedInsts.extend(random.sample(midiInsts, numInsts))
 
 if includeDrum == "Y".lower():
     pickedInsts.append(random.choice(midiDrumKits))
 
-print("Your instruments are:\n")
-for entry in pickedInsts:
-    print(entry)
+print("\nYour instruments are:")
+for i in pickedInsts:
+    print(i)
 

@@ -63,23 +63,35 @@ int main()
 
         switch(command[0]) {
             case 'a':
-                DoDamage(&player, &enemy);
-                GetNextRNGIndex();
-                DoDamage(&enemy, &player);
-                GetNextRNGIndex();
+                if(player.curHP > 0) {
+                    DoDamage(&player, &enemy);
+                    GetNextRNGIndex();
+                }
+
+                if(enemy.curHP > 0) {
+                    DoDamage(&enemy, &player);
+                    GetNextRNGIndex();
+                }
                 break;
             case 'h':
-                DoHeal(&player);
-                GetNextRNGIndex();
-                DoDamage(&enemy, &player);
-                GetNextRNGIndex();
+                if(player.curHP > 0) {
+                    DoHeal(&player);
+                    GetNextRNGIndex();
+                }
+
+                if(enemy.curHP > 0) {
+                    DoDamage(&enemy, &player);
+                    GetNextRNGIndex();
+                }
                 break;
             case 's':
-                DoDamage(&enemy, &player);
-                GetNextRNGIndex();
+                if(enemy.curHP > 0) {
+                    DoDamage(&enemy, &player);
+                    GetNextRNGIndex();
+                }
                 break;
             case 'r':
-                printf("RNG table is at index %i\n", i);
+                printf("RNG table is at index %i (value: %i)\n", i, rng[i]);
                 break;
         }
 

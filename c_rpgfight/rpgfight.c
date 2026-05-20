@@ -85,6 +85,8 @@ int main()
                 }
                 break;
             case 's':
+                printf("Player skips their turn.\n");
+
                 if(enemy.curHP > 0) {
                     DoDamage(&enemy, &player);
                     GetNextRNGIndex();

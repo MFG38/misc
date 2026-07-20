@@ -15,7 +15,7 @@ fi
 for dir in */; do
     cd $dir
     WADNAME=$(printf '%-20s' "$(pwd | awk -F / '{print $NF}')")
-    DEMOCOUNT=$(find -iname '*.lmp*' | wc -l)
+    DEMOCOUNT=$(find -iname '*.lmp' | wc -l)
 
     echo "$WADNAME $DEMOCOUNT" >> $BASEDIR/$GENFILE
     cd $BASEDIR

@@ -2,6 +2,12 @@
 LOGDATE=$(date +%F)
 FILEDATE=$(date +%Y%m%d)
 
-echo Development Log >> devlog_$FILEDATE.txt
-echo "$LOGDATE" >> devlog_$FILEDATE.txt
-echo --------------- >> devlog_$FILEDATE.txt
+if [ $# -eq 1 ]; then
+    TARPATH=$1
+else
+    TARPATH=$(pwd)
+fi
+
+echo Development Log >> $TARPATH/devlog_$FILEDATE.txt
+echo "$LOGDATE" >> $TARPATH/devlog_$FILEDATE.txt
+echo --------------- >> $TARPATH/devlog_$FILEDATE.txt

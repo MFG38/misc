@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo Cleaning Downloads folder...
-cd ~/Downloads/
+cd $HOME/Downloads/
 
 if [ "$(ls -A $PWD)" ]; then
 	rm -r *

@@ -1,1 +1,0 @@
-An RGB-to-hex color code converter written in Python.

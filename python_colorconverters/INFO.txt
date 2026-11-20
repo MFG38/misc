@@ -1,0 +1,6 @@
+A pair of color converters written in Python.
+
+hex2rgb.py:
+    Converts a hex color code into a set of integers.
+rgb2hex.py:
+    Converts a set of integers into a hex color code.
